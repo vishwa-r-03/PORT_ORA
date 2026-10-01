@@ -13,6 +13,7 @@ The whole device will be 3.7 inch in diameter, exactly the size of the display a
 
 ## File structure
 
+```
 ora-player/
 ├─ platformio.ini
 ├─ include/
@@ -27,7 +28,8 @@ ora-player/
 │  └─ power/          # battery sense, sleep
 └─ src/
    └─ main.cpp
-|_ .gitignore   
+|_ .gitignore 
+```  
 
 
 
