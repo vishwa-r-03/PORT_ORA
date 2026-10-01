@@ -14,8 +14,12 @@ namespace Pins {
 }
 
 namespace DisplayCfg {
-  constexpr uint16_t WIDTH  = 416;
-  constexpr uint16_t HEIGHT = 240;
-  constexpr uint32_t MIN_REFRESH_MS = 180000UL;                     // vendor guidance; lower while testing
-  constexpr uint32_t MAINTENANCE_MS = 24UL * 60UL * 60UL * 1000UL;  // refresh at least daily
+  // Native buffer layout of the panel driver
+  constexpr uint16_t NATIVE_WIDTH  = 240;
+  constexpr uint16_t NATIVE_HEIGHT = 416;
+  // 0 = portrait, 1 or 3 = landscape (416x240), 2 = portrait upside-down
+  constexpr uint8_t  ROTATION = 0;
+
+  constexpr uint32_t MIN_REFRESH_MS = 180000UL;
+  constexpr uint32_t MAINTENANCE_MS = 24UL * 60UL * 60UL * 1000UL;
 }

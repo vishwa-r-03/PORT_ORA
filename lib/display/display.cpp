@@ -9,8 +9,8 @@
 
 namespace {
 
-constexpr uint16_t kWidth       = DisplayCfg::WIDTH;    // 416
-constexpr uint16_t kHeight      = DisplayCfg::HEIGHT;   // 240
+constexpr uint16_t kWidth  = DisplayCfg::NATIVE_WIDTH;   // 240
+constexpr uint16_t kHeight = DisplayCfg::NATIVE_HEIGHT;  // 416
 constexpr size_t   kBytesPerRow = kWidth / 4;           // 4 pixels per byte
 constexpr size_t   kFrameBytes  = kBytesPerRow * kHeight; // 24,960 bytes
 
@@ -63,6 +63,7 @@ bool begin() {
   gfx.setRotation(0);                             // native landscape, 416x240
   gfx.setTextWrap(false);
   gfx.fillScreen((uint16_t)Color::White);
+  gfx.setRotation(DisplayCfg::ROTATION);
   initialised = true;
   return true;
 }

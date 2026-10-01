@@ -1,5 +1,6 @@
-.pio/build/esp32dev/libfc9/display/panel.cpp.o: lib/display/panel.cpp \
- lib/display/panel.h lib/display/vendor/DEV_Config.h \
+.pio/build/esp32dev/libfc9/display/vendor/EPD_3in7g.cpp.o: \
+ lib/display/vendor/EPD_3in7g.cpp lib/display/vendor/EPD_3in7g.h \
+ lib/display/vendor/DEV_Config.h \
  C:/Users/vishw/.platformio/packages/framework-arduinoespressif32/cores/esp32/Arduino.h \
  C:/Users/vishw/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp_arduino_version.h \
  C:/Users/vishw/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include/freertos/FreeRTOS.h \
@@ -134,5 +135,6 @@
  C:/Users/vishw/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_hw_support/include/soc/esp32/spiram.h \
  C:/Users/vishw/.platformio/packages/framework-arduinoespressif32/cores/esp32/io_pin_remap.h \
  C:/Users/vishw/.platformio/packages/framework-arduinoespressif32/cores/esp32/Arduino.h \
- lib/ora_config/ora_config.h lib/display/vendor/EPD_3in7g.h \
- lib/display/vendor/DEV_Config.h
+ lib/ora_config/ora_config.h lib/display/vendor/Debug.h \
+ C:/Users/vishw/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src/Wire.h \
+ C:/Users/vishw/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp32-hal.h
