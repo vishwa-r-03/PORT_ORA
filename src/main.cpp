@@ -1,14 +1,21 @@
 #include <Arduino.h>
-#include "ora_config.h"
+
+#include "bluetooth.h"
 #include "display.h"
+#include "now_playing.h"
+#include "ora_config.h"
+#include "ui.h"
+
+static NowPlayingScreen nowPlaying;
 
 void setup() {
   Serial.begin(115200);
   Display::begin();
-  Display::clear(Display::Color::White);
-  Display::fillRect(0, 0, 416, 36, Display::Color::Red);
-  Display::drawText(10, 8, "Ora", Display::Color::White, 3);
-  Display::drawText(10, 60, "Hello e-ink", Display::Color::Black, 2);
-  Display::refresh(true);   // slow and flickery: that is normal
+  Bluetooth::begin();
+  UI::begin();
+  UI::show(nowPlaying);
 }
-void loop() {}
+
+void loop() {
+  delay(1000);
+}
