@@ -133,5 +133,6 @@
  C:/Users/vishw/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_hw_support/include/soc/esp32/spiram.h \
  C:/Users/vishw/.platformio/packages/framework-arduinoespressif32/cores/esp32/io_pin_remap.h \
  C:/Users/vishw/.platformio/packages/framework-arduinoespressif32/cores/esp32/Arduino.h \
- lib/bluetooth/bluetooth.h lib/display/display.h lib/ui/now_playing.h \
- lib/ui/ui.h lib/ora_config/ora_config.h
+ lib/app/app.h lib/ui/ui.h lib/bluetooth/bluetooth.h \
+ lib/display/display.h lib/ui/glance.h lib/ui/now_playing.h \
+ lib/ora_config/ora_config.h lib/sync/sync.h lib/weather/weather.h
