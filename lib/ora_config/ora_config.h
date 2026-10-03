@@ -80,4 +80,5 @@ namespace GlanceCfg {
 namespace AppCfg {
   constexpr uint32_t BOOT_GRACE_MS  = 6000;   // wait for the phone to reconnect before the first screen
   constexpr uint32_t MODE_SWITCH_MS = 3000;   // state must hold this long before switching screens
+  constexpr bool AUTO_SHOW_NOW_PLAYING = false;   // true = jump to Now Playing when music starts
 }

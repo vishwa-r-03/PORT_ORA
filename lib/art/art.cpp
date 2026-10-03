@@ -56,14 +56,19 @@ void drawTile(Adafruit_GFX& g, int16_t x, int16_t y, int16_t s,
               uint8_t motif, uint8_t corner, const Pair& p) {
   g.fillRect(x, y, s, s, px(p.bg));
   const int16_t m = s / 2;
+  // Radii scale down for small tiles (thumbnails); full-size art is unchanged.
+  const int16_t outer = (m > 8) ? m - 2 : m - 1;
+  const int16_t inner = (m > 8) ? m - 7 : m * 55 / 100;
 
   switch (motif) {
     case 0:                                             // disc
-      g.fillCircle(x + m, y + m, m - 2, px(p.fg));
+      g.fillCircle(x + m, y + m, outer, px(p.fg));
       break;
+
     case 1:                                             // quarter disc
       quarter(g, x, y, s, corner, p.fg);
       break;
+
     case 2: {                                           // half-square triangle
       const int16_t x0 = x, x1 = x + s - 1, y0 = y, y1 = y + s - 1;
       switch (corner & 3) {
@@ -74,10 +79,12 @@ void drawTile(Adafruit_GFX& g, int16_t x, int16_t y, int16_t s,
       }
       break;
     }
+
     case 3:                                             // ring
-      g.fillCircle(x + m, y + m, m - 2, px(p.fg));
-      g.fillCircle(x + m, y + m, m - 7, px(p.bg));
+      g.fillCircle(x + m, y + m, outer, px(p.fg));
+      g.fillCircle(x + m, y + m, inner, px(p.bg));
       break;
+
     default:                                            // bar
       if (corner & 1) g.fillRect(x, y + s / 3, s, s / 3, px(p.fg));
       else            g.fillRect(x + s / 3, y, s / 3, s, px(p.fg));

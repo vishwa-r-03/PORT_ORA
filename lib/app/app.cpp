@@ -29,7 +29,7 @@ void begin(UI::Screen& nowPlaying, UI::Screen& glance) {
 
 void update() {
   if (!nowPlayingScreen || !glanceScreen) return;
-  UI::Screen* desired = trackActive() ? nowPlayingScreen : glanceScreen;
+  UI::Screen* desired = (AppCfg::AUTO_SHOW_NOW_PLAYING && trackActive()) ? nowPlayingScreen : glanceScreen;
 
   if (!active) {                                    // first screen: give the phone time to reconnect
     if (millis() < AppCfg::BOOT_GRACE_MS) return;

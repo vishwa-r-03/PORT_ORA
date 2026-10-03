@@ -145,9 +145,8 @@
  C:/Users/vishw/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-spi.h \
  .pio/libdeps/esp32dev/Adafruit\ GFX\ Library/Fonts/FreeSans9pt7b.h \
  .pio/libdeps/esp32dev/Adafruit\ GFX\ Library/Fonts/FreeSansBold12pt7b.h \
- .pio/libdeps/esp32dev/Adafruit\ GFX\ Library/Fonts/FreeSansBold18pt7b.h \
- .pio/libdeps/esp32dev/Adafruit\ GFX\ Library/Fonts/FreeSansBold24pt7b.h \
  .pio/libdeps/esp32dev/Adafruit\ GFX\ Library/Fonts/FreeSansBold9pt7b.h \
+ lib/art/art.h lib/bluetooth/bluetooth.h lib/ui/cat_art.h \
  lib/display/display.h lib/ui/icons.h lib/weather/weather.h \
  lib/network/network.h lib/ora_config/ora_config.h \
  lib/ora_config/secrets.h lib/sync/sync.h lib/ui/widgets.h \
