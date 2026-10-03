@@ -37,6 +37,9 @@ ora-player/
 
 - Tested the display and confirmed everything works.
 - Planned out the product and its functionality.
+- Added wifi and bluetooth capability
+- Added audio streaming
+- completed glance screen
 
 
 The circuit diagrams and other updates will be added as the project progresses.
