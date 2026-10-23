@@ -6,6 +6,7 @@
 #include <string.h>
 
 #include "ora_config.h"
+#include <driver/i2s.h>
 
 namespace {
 
@@ -121,12 +122,17 @@ void begin() {
 
   a2dp.set_avrc_metadata_callback(onMetadata);
   a2dp.set_on_connection_state_changed(onConnection);
-  // If the track duration never arrives, request it explicitly. The parameter
-  // type differs between library versions, so check the header first:
-  // a2dp.set_avrc_metadata_attribute_mask(ESP_AVRC_MD_ATTR_TITLE | ESP_AVRC_MD_ATTR_ARTIST |
-  //                                       ESP_AVRC_MD_ATTR_ALBUM | ESP_AVRC_MD_ATTR_PLAYING_TIME);
 
-  // Default output = internal DAC on GPIO25/26. Nothing needs to be attached.
+  // Send audio to the external PCM5102A over I2S instead of the internal DAC.
+  i2s_pin_config_t pins = {
+    .mck_io_num   = I2S_PIN_NO_CHANGE,                      // PCM5102A needs no MCLK (SCK tied to GND)
+    .bck_io_num   = Pins::I2S_BCK,
+    .ws_io_num    = Pins::I2S_WS,
+    .data_out_num = Pins::I2S_DOUT,
+    .data_in_num  = I2S_PIN_NO_CHANGE
+  };
+  a2dp.set_pin_config(pins);
+
   a2dp.start(Bt::DEVICE_NAME);
 }
 

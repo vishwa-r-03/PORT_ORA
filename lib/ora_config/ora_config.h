@@ -11,7 +11,12 @@ namespace Pins {
   constexpr uint8_t EPD_RST  = 22;
   constexpr uint8_t EPD_BUSY = 4;
   constexpr uint8_t EPD_PWR  = 33;
-  // TODO: input, I2S, SD, battery sense
+
+  constexpr uint8_t I2S_BCK  = 26;
+  constexpr uint8_t I2S_WS   = 25;
+  constexpr uint8_t I2S_DOUT = 27;
+
+  // TODO: input, SD, battery sense
 }
 
 // ---------------------------------------------------------------- Display
