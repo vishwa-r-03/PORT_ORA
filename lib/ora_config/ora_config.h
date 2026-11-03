@@ -16,6 +16,12 @@ namespace Pins {
   constexpr uint8_t I2S_WS   = 25;
   constexpr uint8_t I2S_DOUT = 27;
 
+    // Temporary bench wiring for the SD module on the dev kit (own SPI bus)
+  constexpr uint8_t SD_BENCH_SCK  = 14;
+  constexpr uint8_t SD_BENCH_MOSI = 13;
+  constexpr uint8_t SD_BENCH_MISO = 32;
+  constexpr uint8_t SD_BENCH_CS   = 15;
+
   // TODO: input, SD, battery sense
 }
 
